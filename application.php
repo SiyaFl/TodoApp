@@ -22,6 +22,12 @@ $database = mysqli_connect('localhost','root','','todo');
 function get_todo_items(){
 	global $db;
 
+	$db = new PDO(
+		'mysql:host=localhost;dbname=ags_todo;charset=utf8', // host, dbname, and charset
+		'root', // username
+		''  // password
+	);
+
 	$items = false;
 
 	try {
